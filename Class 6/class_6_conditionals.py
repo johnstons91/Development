@@ -3,9 +3,20 @@
 ''' Lets follow through the two code snippets below'''
 
 # This will run
+x = 20
+y = 15
+
+if x > y:
+    print(x)
 
 
 # This will not run
+x = 20
+y = 20
+
+if x > y:
+    print(x)
+
 
 
 
@@ -22,6 +33,9 @@ This is odd
 '''
 
 # We can use modulus to figure out odd or even
+
+
+
 # val = 6
 # result = val % 2
 # print(result)
