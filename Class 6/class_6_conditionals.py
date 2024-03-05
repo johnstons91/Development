@@ -30,6 +30,7 @@ Example:
 User input: 7
 This is odd
 
+
 '''
 
 # We can use modulus to figure out odd or even
@@ -43,6 +44,10 @@ This is odd
 
 '''Exercise Solution'''
 
+user_input = int(input("please enter your number: "))
+
+if user_input % 2 != 0:
+    print("this is odd")
 
 
 ''' Else If (Elif) Statements '''
@@ -56,9 +61,21 @@ D - Between 65 and 69
 F - Anything under 65
 '''
 
+#Get grade from user
+score = int(input("please enter your grade: "))
 
 
-
+#Create our conditional
+if score >= 90 and score <= 100:
+    print("Grade A")
+elif score >= 80 and score <= 90:
+    print("Grade B")
+elif score >= 70 and score <= 80:
+    print("Grade c")
+elif score >= 65 and score <= 70:
+    print("Grade D")
+else:
+    print("Grade F")
 
 '''
 Exercise
