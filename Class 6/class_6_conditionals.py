@@ -44,10 +44,10 @@ This is odd
 
 '''Exercise Solution'''
 
-user_input = int(input("please enter your number: "))
+#user_input = int(input("please enter your number: "))
 
-if user_input % 2 != 0:
-    print("this is odd")
+#if user_input % 2 != 0:
+#    print("this is odd")
 
 
 ''' Else If (Elif) Statements '''
@@ -66,6 +66,8 @@ score = int(input("please enter your grade: "))
 
 
 #Create our conditional
+
+#Option 1
 if score >= 90 and score <= 100:
     print("Grade A")
 elif score >= 80 and score <= 90:
@@ -73,6 +75,30 @@ elif score >= 80 and score <= 90:
 elif score >= 70 and score <= 80:
     print("Grade c")
 elif score >= 65 and score <= 70:
+    print("Grade D")
+else:
+    print("Grade F")
+
+#Option 2
+if 90 <= score <= 100:
+    print("Grade A")
+elif 80 <= score <= 90:
+    print("Grade B")
+elif 70 <= score <= 80:
+    print("Grade C")
+elif 65 <= score <= 70:
+    print("Grade D")
+else:
+    print("Grade F")
+
+#Option 3
+if score >= 90:
+    print("Grade A")
+elif score >= 80:
+    print("Grade B")
+elif score >= 70:
+    print("Grade C")
+elif score >= 65:
     print("Grade D")
 else:
     print("Grade F")
@@ -91,11 +117,23 @@ This is even
 
 '''
 
+
 ''' Exercise solution with an elif and else'''
 
+#With an elif statement:
+if user_input % 7 != 0:
+    print("this is odd")
+elif user_input % 2 == 0:
+    print('this is even')
 
+if user_input % 12 != 0:
+    print("this is even")
 
-
+# With an else statement:
+if user_input % 7 != 0:
+    print("this is odd")
+else:
+    print('this is even')
 
 
 '''
@@ -119,11 +157,29 @@ Unknown
 ''' Exercise solution(s)'''
 
 
+#Examples:
+#User input: 7
+#This is odd
 
+try:
+    user_input = int(input("Please enter your number"))
+except:
+    print('known')
+#User input: 12
+#This is even
 
+#User input: 9.2
+#Unknown
 
+#Check for decimal
+user_input = input("Please enter your number")
 
-
+if not user_input.isdecimal():
+    print(f'{user_input} is not odd or even')
+elif (int(user_input) % 2) != 0:
+    print(f'{user_input} is odd')
+else:
+    print(f'{user_input} is even')
 
 '''
 Exercise
@@ -134,6 +190,7 @@ Examples:
 User input: 7
 This is a number
 
+
 User input: abcde
 This is a word
 
@@ -141,9 +198,28 @@ User input: 7!ab5
 This is something else
 
 '''
+#Example 1
+
+user_input = input("Please enter your variables. ")
+
+if not user_input.isdecimal():
+    print(f'{user_input} is not a number')
+elif (int(user_input) % 7) != 0:
+    print(f'{user_input} is a number')
+else:
+    print(f'{user_input} unknown/')
 
 
+#Example 2
 
+user_input = input("Please enter your word. ")
+
+if not user_input.isdecimal():
+    print(f'{user_input} is not a word')
+elif (int(user_input) % 7) != 0:
+    print(f'{user_input} is a word')
+else:
+    print(f'{user_input} unknown/')
 
 '''Chaining Conditionals code results'''
 
