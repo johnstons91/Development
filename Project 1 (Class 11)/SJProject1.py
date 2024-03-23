@@ -1,22 +1,23 @@
 import re
 
-#Username & Password Variables: use to ask for username and password in the ehile loop
+#Username & Password Variables:
 username = ''
 password = ''
 
 #Create account & requirements:
 
-login = "Please create a username and password to sign up."
+login = "Create username and password to sign up."
 
 username_requirements = "Username requirements: 1.Start with a lowercase letter 2. Must contain only letters, numbers, and underscores"
-password_requirements = "When creating the password, please it them to 8 characters long. @ least 1 uppercase & lowercase letter. 1 digit. one character (!,?,@,#,$,^,&,*,_,-), no spaces"
+password_requirements = "Password requirements: 1. At least 8 characters long. 2. At least 1 uppercase & lowercase letter. 3. At least 1 digit. 4. At least one character (!,?,@,#,$,^,&,*,_,-), 5.no spaces"
 print(username_requirements)
 print(password_requirements)
 
 taken_usernames = {
-    "user1": "password1",
-    "user2": "password2",
-    "user3": "password3"
+    "admin": "admin",
+    "admin123": "admin123",
+    "superuser": "superuser",
+    "superuser123": "superuser123"
 }
 
 def check_credentials(username, password):
@@ -37,6 +38,7 @@ def main():
         print("Authentication failed. Invalid username or password.")
 
 if __name__ == "__main__":
+else:
     main()if len(user_input) 
 
 

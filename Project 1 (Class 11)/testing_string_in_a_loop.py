@@ -20,57 +20,55 @@ Sd@sdjsdf0 - should pass all tests
 user_input, re_promp_user = '', '' #initializing
 while True:
     user_input = input("Please enter your string:  ")
-
-    # Not enough characters
+    print(user_input)
+# Not enough characters
 if len(user_input) >= 10:
     print(f'Test Passed: {user_input} is greater than 10 characters')
 else:
     print(f'Test Failed: {user_input} is less than 10 characters')
      #if they fail
-
+print
 
     # # Contain at least 1 number
 contains_num = re.search(r'\d', user_input) #Will deliver true or false based on the digit being in the user input (will look for a digit in the string).
 if contains_num:
-        print(f'Test Passed: {user_input} contains a number')
-       
+    print(f'Test Passed: {user_input} contains a number')
 else:
-        print(f'Test Failed: {user_input} does not contain a number')
+    print(f'Test Failed: {user_input} does not contain a number')
     
+# Contains at least 1 capital letter
+any_uppercase = any(u.isupper() for u in user_input)
 
-    # else:
-    #     print(f'Test Failed: {user_input}' is less than 10 characters)
-    #     continue 
-    # print("Lets test for contains 1 number")
+if any_uppercase:
+    print(f'Test Passed: {user_input} contains a capital letter')
+else:
+    print(f'Test Failed: {user_input} has no caps')
+    continue
 
-    # Contains at least 1 capital letter
-    # any_uppercase = any(u.isupper() for u in user_input)
-    # if any_uppercase:
-    #     print(f'Test Passed: {user_input} contains a capital letter')
-    # else:
-    #     print(f'Test Failed: {user_input} has no caps')
-    #     continue
+# Contains '@' symbol
+if '@' in user_input:
+        print(f'Test Passed: {user_input} contains a \'@\' symbol')
+else:
+    print(f'Test Failed: {user_input} no \'@\' symbol')
+    continue
 
-    # # Contains '@' symbol
-    # if '@' in user_input:
-    #     print(f'Test Passed: {user_input} contains a \'@\' symbol')
-    # else:
-    #     print(f'Test Failed: {user_input} no \'@\' symbol')
-    #     continue
-    # # Contains no spaces
-    # if 
-    #     print
-    # else:
-    #     print(f'Test Passed: {user_input} contains a space')
-    #     continue
+# Contains no spaces
+has_space = re.search(r'\s', user_input)
+if not has_space:
+    print(f'Test Passed: {user_input} contains no space')
+    print("congrats all testing passed.")
+    break
+else:
+    print(f'Test Failed: {user_input} contains a space')
+    continue
         
-    # re_prompt_user = input("congrats on signing up, please login")
+re_prompt_user = input("congrats on signing up, please login")
 
-    # if user_input == re_promp_user:
-    #     print("Congrats on logging in")
-    #     break
-    # else:
-    #     print("No dice")
+if user_input == re_promp_user:
+    print("Congrats on logging in")
+    break
+else:
+    print("No dice")
 
     
     

@@ -11,7 +11,7 @@ If they match, print “Login successful.” If they don't, print “Incorrect u
 
 # Prompt the user to enter their username and password using the input() function. Be sure to sanatize your data.
 
-variable_1 = 'hotstuffcantlie'
+variable_1 = 'happiness'
 variable_2 = 'awesomeness'
 
 input_username = input("Enter your Username. ")
