@@ -1,82 +1,71 @@
 import re
 
-#Username & Password Variables:
-username = ''
-password = ''
+TAKEN_USERNAMES = ['admin', 'admin123', 'superuser', 'superuser123']
 
-#Create account & requirements:
+def is_valid_username(username):
+    # Check if the username meets the requirements
+    # Username must start with a lowercase letter and only contain letters, numbers, and underscores
+    # Username must not be in the list of taken usernames
+    if not username[0].islower() or not username.isidentifier():
+        return False
+    if username in TAKEN_USERNAMES:
+        return False
+    return True
 
-login = "Create username and password to sign up."
+def is_valid_password(password):
+    # Check if the password meets the requirements
+    # Password must be at least 8 characters long
+    # Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character
+    # Password must not contain spaces
+    if len(password) < 8:
+        return False
+    if not re.search(r"[A-Z]", password):
+        return False
+    if not re.search(r"[a-z]", password):
+        return False
+    if not re.search(r"\d", password):
+        return False
+    if not re.search(r"[!@#$%^&*_-]", password):
+        return False
+    if ' ' in password:
+        return False
+    return True
 
-username_requirements = "Username requirements: 1.Start with a lowercase letter 2. Must contain only letters, numbers, and underscores"
-password_requirements = "Password requirements: 1. At least 8 characters long. 2. At least 1 uppercase & lowercase letter. 3. At least 1 digit. 4. At least one character (!,?,@,#,$,^,&,*,_,-), 5.no spaces"
-print(username_requirements)
-print(password_requirements)
+def sign_up():
+    print("\nSign up with us by creating a Username and Password to continue.\nUsername requirements:\n\n-Username must start with a lowercase letter and only contain letters, numbers, and underscores")
+    while True:
+        username = input("\nPlease create a username: ")
+        if is_valid_username(username):
+            print("Username has been created.")
+            break
+        else:
+            if not username[0].islower() or not username.isidentifier():
+                print("\nInvalid username.\nUsername must start with a lowercase letter and only contain letters, numbers, and underscores.")
+            elif username in TAKEN_USERNAMES:
+                print("\nUsername taken. Please choose a different username.")
+    print("\nPassword requirements:\n\n-Password must be at least 8 characters long.\n-Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character (!@#$%^&*_-).\n-Password must not contain any spaces.")
 
-taken_usernames = {
-    "admin": "admin",
-    "admin123": "admin123",
-    "superuser": "superuser",
-    "superuser123": "superuser123"
-}
+    while True:
+        password = input("\nPlease create a password: ")
+        if is_valid_password(password):
+            break
+        else:
+            print("Invalid password. Password must be at least 8 characters long and meet the requirements.")
 
-def check_credentials(username, password):
-    """Check if the username and password exist and match."""
-    if username in taken_usernames and taken_usernames[username] == password:
-        return True
-    return False
+    print("Sign up successful! You can now log in.")
+    log_in(username, password)
 
-def main():
-    # Requesting username and password from the user
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
+def log_in(username, password):
+    print("\nLog in to your account:")
+    input_username = input("Enter your username: ")
+    input_password = input("Enter your password: ")
 
-    # Checking credentials
-    if check_credentials(username, password):
-        print("Authentication successful!")
-    else:
-        print("Authentication failed. Invalid username or password.")
+    while True:
+        if input_username == username and input_password == password:
+            print("\nLogin successful! {}!".format(username))
+        elif not input_username == username and input_password == password:
+            print("Incorrect username or password. Please try again.")
+        return
 
 if __name__ == "__main__":
-else:
-    main()if len(user_input) 
-
-
-
-
-#User ID requirements: 
-# lower_case = usernames
-taken_usernames = ['admin', 'admin123', 'superuser', 'superuser123']
-first_letter = lower_case[0]
-lower_case_test = first_letter.islower()
-
-if lower_case_test is True:
-    print("Usern. ")
-else:
-    print("Username is taken. ")
-
-
-
-if users_username in taken_usernames :
-    print()
-
-
-
-# if then else 
-chars = ('!','?','@','#','$','^','&','*','_','-')
-
-#if passwords contains:(password == chars)
-
-# error_messages = ['Incorrect username', 'Incorrect password', 'Invaild requirements']
-
-# print(error_messages[0])
-# print(error_messages[1])
-# print(error_messages[2])
-
-
-
-
-
-
-
-#Login successful
+    sign_up()
