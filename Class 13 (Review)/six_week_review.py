@@ -248,9 +248,15 @@ while True:
 # In a while loop, ask the user for a word in all lowercase. If the string is not all lowercase, reprompt the user until the condition is met
 
 # HINT The isupper() method returns True if all the characters are in upper case, otherwise False.
+while True:
+   lower_case = input('What is your lowercase word. ')
 
-
-        
+   if lower_case.islower():
+      print('thank you for your lowercase letter')
+      break
+   else:
+      continue
+   
 # Create a while loop, We will ask the user for a string, the first character of the string must be a number, the last character must be a capital letter to pass testing. Otherwise the user must keep trying.
 
 # test_word = '1helloH'
