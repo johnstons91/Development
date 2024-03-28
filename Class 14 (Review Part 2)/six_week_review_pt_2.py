@@ -1,3 +1,5 @@
+import random
+
 '''Create a new list that contains any students without the letter a, do one version with a for loop, do another one with list comprehension'''
 
 # For Loop
@@ -220,8 +222,8 @@ Positive, Negative, or Zero: Write a Python program that takes a number as input
 Largest of Three Numbers: Write a Python program that takes three numbers as input and prints the largest among them.
 '''
 #Option 1
-max_list = [int(input("Please enter your number: ")), int(input("Please enter your number: ")), int(input("Please enter your number: "))]
-print(f'The biggest number in the list is {max(max_list)}')
+# max_list = [int(input("Please enter your number: ")), int(input("Please enter your number: ")), int(input("Please enter your number: "))]
+# print(f'The biggest number in the list is {max(max_list)}')
 
 #Option 2
 # first_input = int(input("Please enter your number: "))
@@ -296,14 +298,15 @@ my_super_list = [
     ['spiderman','captain america','ironman'],
     ['aquaman']
                  ]
-
-
-
-
+new_super = []
+for s in my_super_list:
+    new_super.extend(s)
+print(new_super)
 
 '''
  Number Guessing Game: Write a Python program that generates a random number between 1 and 10 and lets the user guess the number. Use a `while` loop, `break` when the correct number is guessed, and `continue` to keep prompting the user until they guess correctly.
 '''
-
-
+#Randrange- generates a value specified between two numbers
+number_to_guess = random.randrange(0,10)
+print(number_to_guess)
 
