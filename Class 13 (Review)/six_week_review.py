@@ -27,8 +27,10 @@ print(6 * 3)
 
 # subtract 15 from 45
 print(15 - 45)
+
 # subtract 60 from 100
 print(5 - 100)
+
 # raise 5 to the 2nd power
 print(5 ** 2)
 
