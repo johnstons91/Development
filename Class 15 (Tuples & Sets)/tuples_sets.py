@@ -181,11 +181,89 @@ The set of employees that know both Python and JavaScript
 The set of employees that know JavaScript, but not Python
 The set of employees that know Python or JavaScript, but not both
 '''
+#Initialize our variables
+
+
+#Data Collection Sets
+python_devs, js_devs = set(), set()
+
+print(python_devs)
+print(type(python_devs))
+
+#User Input
+dev_type_input, dev_name_input = '', ''
+
+#Error Messages
+error_msgs = ('Invalid Input, please try again.', 'Thank you, have a nice day')
+
+#User Instructions
+print(''' 
+Python and JS Developer Tracker
+Instructions
+      Input 's' or 'stop' at anytime to exit program
+      To add a python developer type 'p' when prompted
+      To add a JavaScript developer type 'js' when prompted
+''')
+
+#While Loop
+while True:
+    #Inputs
+    dev_type_input = input("\n Type 'P' for PYTHON Developer, 'JS' for Javacript Developer, or 'STOP' to exit program: ").lower() 
+    
+    #If statements, break keyword, continue
+    #This gives the user an exit
+    if dev_type_input == 'stop'
+        print(error_msgs[1])
+        break
+
+    #Get a dev type, add to our sets, and offer an exit
+    if dev_type_input == 'p' or dev_type_input == 'js':
+        dev_name_input = input("Enter developer name: ").lower()
+
+        if dev_name_input == 'stop':
+            print(error_msgs[1])
+            break
+        elif dev_type_input == 'p':
+            python_devs.add(dev_name_input.title())
+        else:
+            js devs.add(dev_name_input.title())
+    else:
+        print(error_msgs[0])
 
 
 
+# initialize our variables
+ 
+# instructions
+ 
+# inputs
+ 
+# while loop
+ 
+# print statement, formatted strings
+ 
+# sets
+ 
+# break keyword, continue, if statements
+ 
+# string methods
+ 
+# put our error messages in a tuple
 
-
-
-
-
+# instructions
+ 
+# initialize our variables
+ 
+# put our error messages in a tuple
+ 
+# while loop
+ 
+# inputs
+ 
+# string methods for cleanup if needed .strip(), .title()
+ 
+# if statements, break keyword, continue,
+ 
+# sets
+ 
+# print statement, formatted strings, to display the set results
