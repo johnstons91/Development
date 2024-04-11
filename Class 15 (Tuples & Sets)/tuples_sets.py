@@ -212,7 +212,7 @@ while True:
     
     #If statements, break keyword, continue
     #This gives the user an exit
-    if dev_type_input == 'stop'
+    if dev_type_input == 'stop':
         print(error_msgs[1])
         break
 
@@ -226,9 +226,19 @@ while True:
         elif dev_type_input == 'p':
             python_devs.add(dev_name_input.title())
         else:
-            js devs.add(dev_name_input.title())
+            js_devs.add(dev_name_input.title())
     else:
         print(error_msgs[0])
+        continue
+
+        #Intersection means they know both
+    both_languages = python_devs.intersection(js_devs) #Everybody who knows both
+    know_js_not_python = js_devs.difference(python_devs) #Know JS not Python - difference
+    know_python_or_js_but_not_both = js_devs.symmetric_difference(python_devs) #Who knows python or js but not both
+
+    print(both_languages, know_js_not_python, know_python_or_js_but_not_both)
+    break
+
 
 
 
