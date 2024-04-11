@@ -278,3 +278,21 @@ print('---------------------------------------------------------')
 # if statements, break keyword, continue,
 # sets
 # print statement, formatted strings, to display the set results
+
+
+'''
+Take a word from the user and let them know how many vowels are in the word
+'''
+
+is_a_vowel = input("please input your word")
+
+my_input = input("How many times does the letter 'b' show up")
+
+counter = 0
+char = 'b'
+
+for b in my_input:
+    if b in char:
+        counter +=1
+
+print(counter)
