@@ -231,49 +231,50 @@ while True:
         print(error_msgs[0])
         continue
 
-        #Intersection means they know both
-    both_languages = python_devs.intersection(js_devs) #Everybody who knows both
+    #Set Operations   
+    both_languages = python_devs.intersection(js_devs) #Everybody who knows both (Intersection means they know both)
     know_js_not_python = js_devs.difference(python_devs) #Know JS not Python - difference
     know_python_or_js_but_not_both = js_devs.symmetric_difference(python_devs) #Who knows python or js but not both
 
     print(both_languages, know_js_not_python, know_python_or_js_but_not_both)
     break
+#if sets are empty, disaplay no data for user
+if both_languages == set():
+    both_languages = 'No Data'
+
+if know_js_not_python == set():
+    know_js_not_python = 'No Data'
+
+if know_python_or_js_but_not_both == set():
+    know_python_or_js_but_not_both = 'No Data'
+
+
+print('RESULTS')
+print('--------------------------------------------------------')
+print(f'The following developers know both languages: {both_languages}')
+print(f'The following developers know Javascript but not PYTHON: {know_js_not_python}')
+print(f'The following developers know PYTHON or Javascript but not both: {know_python_or_js_but_not_both}')
+print('---------------------------------------------------------')
+
 
 
 
 
 # initialize our variables
- 
 # instructions
- 
 # inputs
- 
 # while loop
- 
 # print statement, formatted strings
- 
 # sets
- 
 # break keyword, continue, if statements
- 
 # string methods
- 
 # put our error messages in a tuple
-
 # instructions
- 
 # initialize our variables
- 
 # put our error messages in a tuple
- 
 # while loop
- 
 # inputs
- 
 # string methods for cleanup if needed .strip(), .title()
- 
 # if statements, break keyword, continue,
- 
 # sets
- 
 # print statement, formatted strings, to display the set results
