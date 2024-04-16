@@ -141,25 +141,25 @@ Out:
 {'one': 4, 'two': 10, 'three': 30}
 
 '''
-list1 = ['one', 'two', 'three']
-list2 = [4, 10, 30]
+# list1 = ['one', 'two', 'three']
+# list2 = [4, 10, 30]
 
-new_dict = {}
+# new_dict = {}
 
-for n in range(len(list1)):
-    new_dict.update({list1[n]:list2[n]})
-    print(new_dict)
+# for n in range(len(list1)):
+#     new_dict.update({list1[n]:list2[n]})
+#     print(new_dict)
 
-my_keys = ['one', 'two', 'three']
-my_values = [4, 10, 30]
+# my_keys = ['one', 'two', 'three']
+# my_values = [4, 10, 30]
 
 # Using Zip & Dict
 # my_dictionary = dict(zip(my_keys, my_values))
 # print(my_dictionary)
 
 # Using dictionary comprehension
-my_dictionary = {keys: values for (keys, values) in zip(my_keys, my_values)}
-print(my_dictionary)
+# my_dictionary = {keys: values for (keys, values) in zip(my_keys, my_values)}
+# print(my_dictionary)
 
 
 
@@ -170,9 +170,9 @@ Write a dictionary that contains five words and their definitions. Then have you
 Hint: Use the items() method
 
 '''
-cars = {"make":"Honda",
-        "model1":"Accord",
-        }
+# cars = {"make":"Honda",
+#         "model1":"Accord",
+#         }
 
 
 
@@ -180,14 +180,14 @@ cars = {"make":"Honda",
 
 
 
-words = {"color":"blue", "veggie":"radish", "vehicle": "bike", "mood": "happy", "pet":"cat"}
+# words = {"color":"blue", "veggie":"radish", "vehicle": "bike", "mood": "happy", "pet":"cat"}
 
 
 
 # As datasets, we can use bracket notation
 
-choices = {"flavors":['strawberry', 'vanilla', 'orange'],
-           "sizes":['large', 'medium', 'small']}
+# choices = {"flavors":['strawberry', 'vanilla', 'orange'],
+#            "sizes":['large', 'medium', 'small']}
 
 
 '''
@@ -210,7 +210,7 @@ Write some code that uses a dictionary to calculate the mode of a list.
 
 '''
 
-my_list_items = [1,2,4,1,3,4,1,1] # our list
+my_list_items = [1,2,4,1,3,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,10,10,10,10,10,10,10,10] # our list
 
 output = {} #m final output
 
@@ -220,15 +220,25 @@ for m in my_list_items:
         # print(output)
     else:
         output[m] += 1 #updating the count
-print(output)
+# print(output)
 
-
+#Shorten the syntax
+# for m in my_list_items: #looping through the list
+#     output[m] = mode(use_stats_module)
+    
 # Statistics module
-
+# use_stats_module = [1,2,4,1,3,4,1,1,1,10,10,10,10,10]
+# result = mode(use_stats_module)
+# print(result)
 
 # Looping through and adding 
 incomes = {"apple": 5600.00, "orange": 3500.00, "banana": 5000.00}
+total_income = 0.00
 
+for i in incomes.values():
+    total_income += i #adding income each time through
+
+print(sum(incomes.values())) #
 
 
 '''
