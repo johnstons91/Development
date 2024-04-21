@@ -38,20 +38,23 @@ while True:
         print(messages[0])
     break
 
-print("Enter password and username to login.")   
+print("Enter username and password to login.")
 un_log_in = input("Username: ")
 pw_log_in = input("Password: ")
-username = un_log_in
-pwd = pw_log_in
-
-while True:    
-    if username == un_log_in and pwd == pw_log_in:
-        print("Invalid username and password.")
-        continue 
+ 
+while True:
+    if un_log_in != username:
+        print("Invalid username.")
+        un_log_in = input("Username: ")
+        continue
+    elif pw_log_in != pwd:
+        print("Invalid password.")
+        pw_log_in = input("Password: ")
+        continue
+    else:
+        print(messages[1])
+        break
     
-    break
-
-print(messages[1])
         
     
 
