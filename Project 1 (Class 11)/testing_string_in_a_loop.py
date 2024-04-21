@@ -30,7 +30,7 @@ else:
 print
 
     # # Contain at least 1 number
-contains_num = re.search(r'\d', user_input) #Will deliver true or false based on the digit being in the user input (will look for a digit in the string).
+contains_num = re.search(r'\d'user_input) #Will deliver true or false based on the digit being in the user input (will look for a digit in the string).
 if contains_num:
     print(f'Test Passed: {user_input} contains a number')
 else:
@@ -43,7 +43,7 @@ if any_uppercase:
     print(f'Test Passed: {user_input} contains a capital letter')
 else:
     print(f'Test Failed: {user_input} has no caps')
-    continue
+    
 
 # Contains '@' symbol
 if '@' in user_input:

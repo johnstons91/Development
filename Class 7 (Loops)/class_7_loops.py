@@ -31,10 +31,10 @@ This allows you to take user input multiple times without writing multiple lines
 Lets look at code that will run infinitely until the user tells it to "stop"
 '''
 #Initialize our string
-# userin = '' #Set condition to initialize the variable
+userin = '' #Set condition to initialize the variable
 
-# while userin != 'stop':
-#     userin = input("Please enter a word, or 'stop' to end the loop: ")
+while userin != 'stop':
+    userin = input("Please enter a word, or 'stop' to end the loop: ")
 #     print(userin)
 
 
@@ -46,22 +46,19 @@ Create two variables called username and password.
 Prompt the user to enter their username and password.
 Use conditionals and logical operators to check whether the username and password entered by the user match the username and password variables.
 As long as the username and password are incorrect, print “Incorrect username or password”, and keep asking the user for their username and password.
-If they match, print “Login successful” and end the program.
+If they match, print “Login successful” and end the program.'''
 
-
-'''
-
-# # Set sys id and pass
+'''Set sys id and pass'''
 # sys_id = 'admin'
 # sys_password = 'password'
 
-# # Prompt User
+''' Prompt User'''
 # user_id = input("Please enter your username: ")
 # user_password = input("Please enter your password: ")
 
-# # Our initial check, while not equal we will enter loop
+'''Our initial check, while not equal we will enter loop.'''
 # while sys_id != user_id and sys_password != user_password:
-#     #We entered the loop. this means the username/password did not match
+'''We entered the loop. this means the username/password did not match'''
 #     print("Incorrect username or password")
 #     user_id = input("Please enter your username: ")
 #     user_password = input("Please enter your password: ")

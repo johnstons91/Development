@@ -5,10 +5,10 @@ import re
 
 '''Initialization and prompt (and testing)'''
 
-# first_input, second_input = '', ''
+first_input, second_input = '', ''
 
-# while True:
-#     first_input = input("Please enter ")
+while True:
+    first_input = input("Please enter ")
 
 '''Handling error messages with a list (and testing)'''
 error_messages = ['Error Message 1', 'Error Message 2', 'Error Message 3']
