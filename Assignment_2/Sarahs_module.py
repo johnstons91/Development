@@ -1,5 +1,5 @@
 print("Import successful")
-#This will ontain functions
+#This will contain functions
 
 def say_hello(name):
     print(f'Hello {name}!')
