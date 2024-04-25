@@ -10,31 +10,31 @@ import pandas as pd
 '''
 
 # How do we create a dictionary?
-# user_data = {"user id":400, 
-#              "name":"Fritz",
-#              "address":'1515 Mockingbird Lane'}
+user_data = {"user id":400, 
+             "name":"Fritz",
+             "address":'1515 Mockingbird Lane'}
 
-# print(user_data)
-# print(type(user_data))
+print(user_data)
+print(type(user_data))
 
 
 
 
 # Access keys with brackets
-# print(user_data["name"])
-# print(user_data['user id'])
-# print(user_data['address'])
+print(user_data["name"])
+print(user_data['user id'])
+print(user_data['address'])
 
-# # Add new key value
-# user_data['state'] = 'NY'
-# print(user_data['state'])
-# user_data['state'] = 'NJ'
-# print(user_data['state'])
+# Add new key value
+user_data['state'] = 'NY'
+print(user_data['state'])
+user_data['state'] = 'NJ'
+print(user_data['state'])
 
 
-# lets look at all the methods available to us
-# print(dir(user_data))
-# print(user_data.__contains__("user_id"))
+# lets look at all the METHODS available to us
+print(dir(user_data))
+print(user_data.__contains__("user_id"))
 
 # lets try one
 # print(user_data.__contains__("user id"))
