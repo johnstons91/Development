@@ -1,7 +1,7 @@
 import re
 
 usernames_taken = ['admin', 'admin123', 'superuser', 'superuser123']
-error_messages = ['Invalid username', 'Username Taken', 'Invalid Password']
+error_messages = ['Invalid username', 'Username Taken', 'Invalid Password', 'Incorrect username and password']
 messages = ['Sign up successful', 'Login successful']
 
 print("To sign up, please enter a username and password.")
@@ -9,53 +9,41 @@ print("Username must start with a lowercase letter and only contain letters, num
 print("Password must be at least 8 characters long. Contain at least 1 uppercase letter, 1 lowercase letter, 1 digit, & 1 special character (!@#$%^&*_-). Must not contain any spaces.")
 
 while True:
-    username = input("Create Username: ")   
-    if not re.match(r'^[a-z]\w*$', username): 
+    username = input("Create Username: ")
+    pwd = input("Create Password: ")
+    #Checking username
+    username_check = username[0].islower() and username.isidentifier() 
+
+    if not username_check: 
         print(error_messages[0])
         continue
+
     if username in usernames_taken:
         print(error_messages[1])
         continue
-    break
 
-pwd = input("Create Password: ")
-while True:
+    #Checking password   
     if len(pwd) < 8:
-        print("Password must be at least 8 characters long.")
-        pwd = input("Create Password: ")
+        print(error_messages[2])
         continue
- 
+
     if not re.search(r'[!@#$%^&*-]', pwd):
-        print("Password must contain at least one of the following special characters: !, @, #, $, %, ^, &, *, -")
-        pwd = input("Create Password: ")
+        print(error_messages[2])
         continue
- 
+
     if re.search(r'\s', pwd):
-        print("Password must not contain any spaces.")
-        pwd = input("Create Password: ")
+        print(error_messages[2])
         continue
     else:
         print(messages[0])
-    break
 
-print("Enter username and password to login.")
-un_log_in = input("Username: ")
-pw_log_in = input("Password: ")
+    print("Enter username and password to login.")
+    un_log_in = input("Username: ")
+    pw_log_in = input("Password: ")
  
-while True:
-    if un_log_in != username:
-        print("Invalid username.")
-        un_log_in = input("Username: ")
-        continue
-    elif pw_log_in != pwd:
-        print("Invalid password.")
-        pw_log_in = input("Password: ")
-        continue
-    else:
+    if un_log_in == username and pw_log_in == pwd:
         print(messages[1])
         break
-    
-        
-    
-
-
+    else:
+        print(error_messages[3])
+        continue
