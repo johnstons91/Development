@@ -1,5 +1,5 @@
 import name_module
 
-print(name_module.full_name('Sarah', 'Johnston'))
-print(name_module.reverse_name('Johnston', 'Sarah'))
-print(name_module.initials("Sarah", "Johnston"))
+name_module.full_name('Sarah', 'Johnston')
+name_module.reverse_name('Sarah', 'Johnston')
+name_module.initials("Sarah", "Johnston")
