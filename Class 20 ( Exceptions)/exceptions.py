@@ -121,7 +121,7 @@ If the age is greater than or equal to 65, the customer is eligible for the disc
 
 def user_input(age):
             age = input("Enter your age: ")
-            senior_discount <= 
+            # senior_discount <= 
 
 
 

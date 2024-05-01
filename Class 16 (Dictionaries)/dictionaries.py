@@ -18,8 +18,6 @@ print(user_data)
 print(type(user_data))
 
 
-
-
 # Access keys with brackets
 print(user_data["name"])
 print(user_data['user id'])
@@ -32,23 +30,26 @@ user_data['state'] = 'NJ'
 print(user_data['state'])
 
 
-# lets look at all the METHODS available to us
-print(dir(user_data))
-print(user_data.__contains__("user_id"))
+# # lets look at all the METHODS available to us
+# print(dir(user_data))
+# print(user_data.__contains__("user_id"))
 
 # lets try one
 # print(user_data.__contains__("user id"))
+# print(user_data.__contains__("city"))
 
 # colors = ['blue', 'black', 'purple']
 # print(dir(colors))
 
  # Dict constructor
-# new_dictionary = dict()
+new_dictionary = dict()
 
-# print(new_dictionary)
-# print(type(new_dictionary))
+print(new_dictionary)
+print(type(new_dictionary))
 
-# pet_name = dict(name='fido', age=14)
+pet_name = dict(name='fido', age=14)
+print(pet_name)
+print(type(pet_name))
 
 
 
@@ -252,43 +253,43 @@ records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
 Output: {'manager': 50000, 'developer': 62500}
 '''
 
-records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
-           {'name': 'Alice', 'title': 'developer', 'salary': 60000},\
-           {'name': 'David', 'title': 'developer', 'salary': 65000},
-           {'name': 'Alice', 'title': 'consultant', 'salary': 25000},\
-           {'name': 'David', 'title': 'consultant', 'salary': 40000}]
+# records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
+#            {'name': 'Alice', 'title': 'developer', 'salary': 60000},\
+#            {'name': 'David', 'title': 'developer', 'salary': 65000},
+#            {'name': 'Alice', 'title': 'consultant', 'salary': 25000},\
+#            {'name': 'David', 'title': 'consultant', 'salary': 40000}]
 
-#Our output dictionaries
-title_salary_dict = {} #captre our little titles and salary totals
-title_count_dict = {} #this will captre title count
+# #Our output dictionaries
+# title_salary_dict = {} #captre our little titles and salary totals
+# title_count_dict = {} #this will captre title count
 
-#loop through our list of dictionary
-for r in records:
-    #define key and vale pair for output
-    title = r['title']
-    salary = r['salary']
-    #if the job title does not currently exists, we will add the title and the salary
-    if title not in title_salary_dict:
-        title_salary_dict[title] = salary
-        title_count_dict[title] = 1
-    else:
-        #otherwise, we will update the salary, and update the count of tittles
-        title_salary_dict[title] += salary
-        title_count_dict[title] += 1
+# #loop through our list of dictionary
+# for r in records:
+#     #define key and vale pair for output
+#     title = r['title']
+#     salary = r['salary']
+#     #if the job title does not currently exists, we will add the title and the salary
+#     if title not in title_salary_dict:
+#         title_salary_dict[title] = salary
+#         title_count_dict[title] = 1
+#     else:
+#         #otherwise, we will update the salary, and update the count of tittles
+#         title_salary_dict[title] += salary
+#         title_count_dict[title] += 1
 
-#Lets take a look at our output
-print('All titles and sum of salaries', title_salary_dict)
-print('Titles , and the count of employees', title_count_dict)
+# #Lets take a look at our output
+# print('All titles and sum of salaries', title_salary_dict)
+# print('Titles , and the count of employees', title_count_dict)
 
-result = {s:float(title_salary_dict[s])/title_count_dict[s] for s in title_salary_dict}
+# result = {s:float(title_salary_dict[s])/title_count_dict[s] for s in title_salary_dict}
 
-print(result)
+# print(result)
 
-#pandas solution
-df = pd.DataFrame.from_records(records)
-result = df.groupby('title')['salary'].mean()
+# #pandas solution
+# df = pd.DataFrame.from_records(records)
+# result = df.groupby('title')['salary'].mean()
 
-print(result)
+# print(result)
 
 
 
