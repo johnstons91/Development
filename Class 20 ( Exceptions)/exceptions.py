@@ -119,18 +119,44 @@ If the age is greater than or equal to 65, the customer is eligible for the disc
 
 '''
 
-def user_input(age):
-            age = input("Enter your age: ")
-            # senior_discount <= 
+try:
+        customer_age = int(input("Please enter your age: "))
+        print("Eligable for discount.") if customer_age >= 65 else print("Customer is not eligable for discount.")
+except ValueError:
+        print("Age must be an integer value.")
+
+        
+if customer_age >= 65:
+        print("Eligible for discount")
+else:
+        print("Customer is not eligble for the discount.")
+
+# def user_input(age):
+#             age = input("Enter your age: ")
+#             # senior_discount <= 
 
 
 
 
-# With Except
+# # With Except
+# try:
+#          customer_age = int(input("Please enter your age: ")) #only line we need to try.          
+# except ValueError:
+#         print("Age must be an integer value.")
 
 
+# # With Except / Else
+# try:
+#             customer_age = int(input("Please enter your age: "))
+#             print("Eligable for discount.") if customer_age >= 65 else print("Customer is not eligable for discount.")
+# except ValueError:
+#         print("Age must be an integer value.")
 
-# With Except / Else
+        
+# if customer_age >= 65:
+#         print("Eligible for discount")
+# else:
+#         print("Customer is not eligble for the discount.")
 
 # With Except / Else / Finally
 
