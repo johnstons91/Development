@@ -110,11 +110,7 @@ class Dog:
 #      def dog_years(self):
 #          dog_years = 7* self.human_age()
 #          return f'{self.name} is {dog_years} in dog years'
-     
-
-
-         
-     
+       
 
 dog1 = Dog('Fido', 2020, 'Golden Retriever') #Created the 1st object of the dog class
 dog2 = Dog('Zuzu', 2021, 'Dachsund') 
