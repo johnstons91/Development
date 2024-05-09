@@ -93,43 +93,39 @@ Classes
 ''' Exercise - Dog Class
 This class will take 3 parameters: dog name, dog breed, and age(human years)'''
 
-class Dog:
-     def __init__(self, name, breed, birth_year):
-        self.name = name
-        self.birth_year = birth_year
-        self.breed = breed 
+# class Dog:
+#      def __init__(self, name, breed, birth_year):
+#         self.name = name
+#         self.birth_year = birth_year
+#         self.breed = breed 
 
-     def __str__(self):
-        return f'{self.name} is a {self.breed} and was born in {self.birth_year}'
+#      def __str__(self):
+#         return f'{self.name} is a {self.breed} and was born in {self.birth_year}'
      
-     def human_age(self):
-        today = datetime.datetime.now()
-        year = today.year
-        return f'{self.name} is {year - self.birth_year} years old in human years'
+#      def human_age(self):
+#         today = datetime.datetime.now()
+#         year = today.year
+#         return year - self.birth_year
      
 #      def dog_years(self):
-#          dog_years = 7* self.human_age()
-#          return f'{self.name} is {dog_years} in dog years'
+#          dog_years = 7 * self.human_age()
+#          return f'{self.name} is {dog_years} in dog years.'
        
+# #Created the 1st object of the dog class
 
-dog1 = Dog('Fido', 2020, 'Golden Retriever') #Created the 1st object of the dog class
-dog2 = Dog('Zuzu', 2021, 'Dachsund') 
-dog3 = Dog('Stella', 2016, 'Japanese Chin') 
+# dog1 = Dog('Fido', 'Golden Retriever', 2020) 
+# dog2 = Dog('Zuzu', 'Dachsund', 2021) 
+# dog3 = Dog('Stella','Japanese Chin', 2016) 
 
-# String representation
+# # String representation
 # print(dog1)
 # print(dog2)
 # print(dog3)
 
-# today = datetime.datetime.now()
-# year =today.year
-# print(year)
-
-# Human Age Method
-
-print(dog1.human_age())
-print(dog2.human_age())
-print(dog3.human_age())
+# # Human Age Method
+# print(dog1.human_age())
+# print(dog2.human_age())
+# print(dog3.human_age())
 
 # # Dog Years Method
 # print(dog1.dog_years())
@@ -162,56 +158,55 @@ Without the __eq__ method, we will only be able to test if it is the same object
 Functions need to be behind the def
 '''
 
-# class Date:
+class Date:
         
-#         def __init__(self, year=1970, month=1, day=1):
-#                 '''These are our parameters'''
-#                 self.year = year
-#                 self.month = month
-#                 self.day = day
+        def __init__(self, year=1970, month=1, day=1):
+                '''These are our parameters'''
+                self.year = year
+                self.month = month
+                self.day = day
 
-#         #this will control what the print built in function displays
-#         def __str__(self):
-#                 return f'Month: {self.month:02d}\nDay:{self.day:02d}\nYear: {self.year:02d}'
+        #This will control what the print built in function displays
+        def __str__(self):
+                return f'Month: {self.month:02d}\nDay:{self.day:02d}\nYear: {self.year}'
         
-#         #this will control what == does in your class
-#         def __eq__(self, other):
-#                 if self.year == other.year and self.month == other.month and self.day == other.day:
-#                         return True
-#                 return False
+        #This will control what == does in your class
+        def __eq__(self, other):
+                if self.year == other.year and self.month == other.month and self.day == other.day:
+                        return True
+                return False
         
-#         #create a method to handle less than date objects, which date came first?
-#         def __lt__(self, other):
-#                 selfdate = datetime.datetime(self.year, self.month, self.day)
-#                 otherdate = datetime.datetime(other.year, other.month, other.day)
-#                 if selfdate < otherdate:
-#                         return True
-#                 return False
+        #create a method to handle less than date objects, which date came first?
+        def __lt__(self, other):
+                selfdate = datetime.datetime(self.year, self.month, self.day)
+                otherdate = datetime.datetime(other.year, other.month, other.day)
+                if selfdate < otherdate:
+                        return True
+                return False
         
-#         def is_leap_year(self, other):
+        def is_leap_year(self, other):
                
-#                 if (self.year % 4 == 0 and self.year % 100 != 0 ) or ( self.year % 400 == 0): 
-#                         return True 
-#                 else :
-#                         return False
+                if (self.year % 4 == 0 and self.year % 100 != 0 ) or ( self.year % 400 == 0): 
+                        return True 
+                else :
+                        return False
 
 
-# my_date_info = Date(2004, 10, 4)  #Create the object
-# second_date = Date(2004, 10, 4)
-# print('Today\'s date is', my_date_info)
+my_date_info = Date(2004, 10, 4)  #Create the object
+second_date = Date(2004, 10, 4)
+print('Today\'s date is', my_date_info)
 
-# #Equality
-# print(my_date_info == second_date)
+#Equality
+print(my_date_info == second_date)
 
-# #Less Than
-# old_date = Date(1998, 2, 10)
-# new_date = Date(2000, 2, 10)
+#Less Than
+old_date = Date(1998, 2, 10)
+new_date = Date(2000, 2, 10)
+print(old_date < new_date)
 
-# print(old_date < new_date)
-
-# #Leap Year
-# my_new_date = Date(2009, 6, 1)
-# print(my_new_date.is_leap_year()) 
+#Leap Year
+my_new_date = Date(2009, 6, 1)
+print(my_new_date.is_leap_year()) 
 
 
 
