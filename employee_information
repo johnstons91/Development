@@ -1,0 +1,4 @@
+<function Employee.__init__ at 0x00000190FE0699E0> 
+ <function Employee.__str__ at 0x00000190FE06ADE0> 
+ <function Employee.years_worked at 0x00000190FE06B060> 
+ <function Employee.total_expense at 0x00000190FE06B100>
