@@ -4,7 +4,6 @@ import datetime
 ~System allows employee data to be stored and managed~
 
 -updating employee information (update_employee_info)
--searching for employees by name & department (search)
 -Calculating Salary Expenses (total_expenses, salary * years_worked)
 
 years_worked = todays date - hire_year
@@ -23,7 +22,7 @@ class Employee:
 
     '''String representation for employee class'''
     def __str__(self):
-        return f'Name: {self._name}\nJob Title: {self._job_title}\nDepartment: {self._department}\nSalary: {self._salary}\nHire Year: {self._hire_year}'
+        return f'\nName: {self._name}\nJob Title: {self._job_title}\nDepartment: {self._department}\nSalary: ${self._salary}\nHire Year: {self._hire_year}'
     
     '''Employee Information to a text file'''
     def write_employees(self, employee):
@@ -90,10 +89,7 @@ print(employee1)
 print("Years Worked:", employee1.years_worked())
 
 # #Calculating salary expenses by salary * years worked
-print("Total Expense", employee1.total_expense())
+print("Total Expense:", employee1.total_expense())
 
 #writing employee information to a text file
 employee1.write_employees("employee.txt")
-
-
-
